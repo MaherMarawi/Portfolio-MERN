@@ -13,10 +13,13 @@ const App = () => {
   
     return (
       <BrowserRouter>
-        <div>
+        <div className="App">
           <Router>
             <Switch>
-              <Route exact path='/admin' component={Admin} />
+              {/* <Route exact path='/admin' component={Admin} /> */}
+              <Route exact path='/admin' render={props => (
+                <Admin />
+                )} />
               <Route exact path='/' component={Home} />
             </Switch>
           </Router>
