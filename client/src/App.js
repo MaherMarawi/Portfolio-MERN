@@ -12,12 +12,14 @@ import Admin from './Components/Admin'
 const App = () => {
   return (
     <BrowserRouter>
-    <div>
-        <Switch>
-          <Route exact path='/admin' component={Admin} />
-          <Route exact path='/' component={Home} />
-        </Switch>
-    </div>
+      <div>
+        <Router>
+          <Switch>
+            <Route exact path='/admin' component={Admin} />
+            <Route exact path='/' component={Home} />
+          </Switch>
+        </Router>
+      </div>
     </BrowserRouter>
   )
 }

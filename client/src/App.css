@@ -366,7 +366,7 @@ img {
   display: block;
 }
 .tab-content>.tab-pane {
-  display: none;
+  /* display: none; */
 }
 .ml-auto {
   margin-left: auto !important;
