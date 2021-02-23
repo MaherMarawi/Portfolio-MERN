@@ -14,8 +14,7 @@ const Navlink = () => {
     const [navStyle, setNavstyle] = useState({
         background: 'transparent',
         paddingTop: '30px',
-        color: 'rgb(211, 187, 155)',
-        overFlow: 'hidden'
+        color: 'rgb(211, 187, 155)'
 
     })
     const [isOpen, setIsOpen] = useState(false)

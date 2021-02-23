@@ -24,6 +24,7 @@ const Projects = () => {
                                             <a href={project.url} target='_Blank'>
                                                 <figure className='cc-effect'>
                                                     <img src={`${imageUrl}${project.projectImage}`}></img>
+                                                    <p>{imageUrl}{project.projectImage}</p>
                                                     <figcaption>
                                                     <div className='overlay'>
                                                         <div className='h4 text'>{project.name}</div>

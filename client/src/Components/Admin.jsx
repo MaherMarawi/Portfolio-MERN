@@ -8,14 +8,19 @@ import DelEdu from './Educations/Admin/DelEdu';
 const Admin = () => {
     const [ pass, setPass ] = useState('')
     useEffect(() => {
-        const p = prompt('enter password')
-        setPass(p)
+        // const p = prompt('enter password')
+        // setPass(p)
         return () => {
             setPass('')
         }
     }, [])
     return (
         <div style={{margin: '20px'}}>
+        <Info />
+            <Text />
+            <ProjectsAdmin />
+            <DelExp />
+            <DelEdu />
         {pass === 'maher' ? <div>
             <Info />
             <Text />
