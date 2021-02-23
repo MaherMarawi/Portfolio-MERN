@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import url from '../../../url'
 
 function Text() {
     const[ info, setInfo ] = useState(null)
     const[ done, setDone ] = useState(true)
     const[ numb, setNumb ] = useState(0)
     useEffect(() => {
-        axios.get('http://localhost:8000/api/getAbout/5fa5acebd953234264241730')
+        axios.get(`${url}/getAbout/5fa5acebd953234264241730`)
             .then( res => {console.log(info)
                 setDone(false)
                 setInfo(res.data)})
@@ -18,7 +19,7 @@ function Text() {
     },[numb])
     const onClick = () => {
         console.log(info)
-        axios.put('http://localhost:8000/api/updateAbout/5fa5acebd953234264241730',info)
+        axios.put(`${url}/updateAbout/5fa5acebd953234264241730`,info)
             .then( res => {setNumb(numb +1)
                 setInfo(null)})
             .catch( err => console.log(err))
