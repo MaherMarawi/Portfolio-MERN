@@ -13,12 +13,10 @@ const App = () => {
   return (
     <BrowserRouter>
     <div>
-      <Router>
         <Switch>
           <Route exact path='/admin' component={Admin} />
           <Route exact path='/' component={Home} />
         </Switch>
-      </Router>
     </div>
     </BrowserRouter>
   )

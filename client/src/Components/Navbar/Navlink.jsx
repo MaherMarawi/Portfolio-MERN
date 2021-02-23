@@ -37,7 +37,7 @@ const Navlink = () => {
         <div className='navlink' style={navStyle}>
             <Navbar color={navStyle.background} dark expand="lg" className="mb-5">
                 <Container>
-                    <NavbarBrand href='#' className='name' style={{ color: navStyle.color }} >Maher Marawi</NavbarBrand>
+                    <NavbarBrand href='#' id='name' style={{ color: navStyle.color }} >Maher Marawi</NavbarBrand>
                     <NavbarToggler onClick={toggle} />
                     <Collapse isOpen={isOpen} navbar>
                         <Nav className="ml-auto" navbar>
