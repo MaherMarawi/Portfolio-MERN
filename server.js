@@ -16,7 +16,8 @@ require('./model/mongoose')
 app.use('/uploads', express.static('uploads'))
 app.use(express.json())
 app.use(bodyParser.json())
-app.use(cors({origin: 'http://localhost:3000'}))
+app.use(cors({origin: 'http://localhost:3000',
+              methods:[ "GET", "POST", "DELETE", "PUT"]}))
 
 app.use(userRouter)
 app.use(aboutRouter)
