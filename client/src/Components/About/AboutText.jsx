@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Placeholder } from 'semantic-ui-react'
+import url from '../../url'
 
 const AboutText = () => {
     const[text, setText] = useState(null)
     useEffect(() => {
-        axios.get('http://localhost:8000/api/getAbout/5fa5acebd953234264241730')
+        axios.get(`${url}/getAbout/5fa5acebd953234264241730`)
             .then( res => {
                 setText(res.data)})
             .catch( err => console.log(err))

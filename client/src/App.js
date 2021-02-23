@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import './App.css';
 import 'semantic-ui-css/semantic.min.css'
 import 'rebass'
@@ -11,6 +11,7 @@ import Admin from './Components/Admin'
 
 const App = () => {
   return (
+    <BrowserRouter>
     <div>
       <Router>
         <Switch>
@@ -18,8 +19,8 @@ const App = () => {
           <Route exact path='/' component={Home} />
         </Switch>
       </Router>
-      
     </div>
+    </BrowserRouter>
   )
 }
 
