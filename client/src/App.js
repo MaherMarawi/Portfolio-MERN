@@ -10,20 +10,18 @@ import Home from './Components/Home'
 import AdminPanel from './Components/AdminPanel'
 
 const App = () => {
-  
-    return (
-      <BrowserRouter>
-        <div className="App">
-          <Router>
-            <Switch>
-              <Route exact path='/' component={Home} />
-              <Route exact path='/adminPanel' component={AdminPanel} />
-            </Switch>
-          </Router>
-        </div>
-      </BrowserRouter>
-    )
-  }
+
+  return (
+    <div className="App">
+      <Router>
+        <Switch>
+          <Route exact path='/adminPanel' component={AdminPanel} />
+          <Route exact path='/' component={Home} />
+        </Switch>
+      </Router>
+    </div>
+  )
+}
 
 
 
