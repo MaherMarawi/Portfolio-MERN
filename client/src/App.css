@@ -44,8 +44,8 @@
    transition: all .3s ease-out;
 }
 .mijn-img:hover{
-  height: 200px;
-  width: 200px;
+  height: 180px;
+  width: 180px;
   animation: none;
   filter: brightness(105%);
 }
@@ -109,16 +109,16 @@
   width: 100%;
   box-shadow: 80% 10%; 
 }
-@media (min-width: 992px){
+@media only screen and (min-width: 992px){
   .container {
   max-width: 960px;
 }}
-@media (min-width: 768px){
+@media only screen and (min-width: 768px){
   .container {
     max-width: 720px;
 }
 }
-@media (min-width: 576px){
+@media only screen and (min-width: 576px){
   .container {
     max-width: 540px;
 }
@@ -135,7 +135,7 @@
     /* border: 1px solid red; */
 }
 .card{
-  position: relative;
+  /* position: relative; */
     /* display: -ms-flexbox; */
     display: flex;
     /* -ms-flex-direction: column; */
@@ -161,14 +161,14 @@
     margin-left: -15px;
     
 }
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .col-md-12 {
     /* -ms-flex: 0 0 100%; */
     flex: 0 0 100%;
     max-width: 100% ;
 }
 }
-@media (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   .col-lg-6 {
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;
@@ -302,7 +302,7 @@ figure {
 }
 
 
-@media (min-width: 768px){
+@media only screen and (min-width: 768px){
   .col-md-3 {
     -ms-flex: 0 0 25%;
     flex: 0 0 25%;
@@ -526,7 +526,7 @@ textarea {
 
 
 
-@media (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   .name .img-title{
     font-size: 15px!important;
     font-weight: bold;
@@ -535,11 +535,11 @@ textarea {
     font-size: 15px;
   }
   .mijn-img{
-    width: 140px;
-    height: 140px;
+    width: 130px;
+    height: 130px;
   }.mijn-img:hover{
-    width: 160px;
-    height: 160px;
+    width: 150px;
+    height: 150px;
   }
   .btn-cv{
     width: 200px;
