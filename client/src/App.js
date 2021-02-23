@@ -7,7 +7,7 @@ import 'rebass'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Home from './Components/Home'
-import Admin from './Components/Admin'
+import AdminPanel from './Components/AdminPanel'
 
 const App = () => {
   
@@ -16,10 +16,7 @@ const App = () => {
         <div className="App">
           <Router>
             <Switch>
-              {/* <Route exact path='/admin' component={Admin} /> */}
-              <Route exact path='/admin' render={props => (
-                <Admin />
-                )} />
+              <Route exact path='/adminPanel' component={AdminPanel} />
               <Route exact path='/' component={Home} />
             </Switch>
           </Router>

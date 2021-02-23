@@ -5,7 +5,7 @@ import ProjectsAdmin from './Projects/ProjectAdmin/Delete';
 import DelExp from './Experiences/Admin/DelExp'
 import DelEdu from './Educations/Admin/DelEdu';
 
-const Admin = () => {
+const AdminPanel = () => {
     const [pass, setPass] = useState('')
     useEffect(() => {
         const p = prompt('enter password')
@@ -27,5 +27,5 @@ const Admin = () => {
     )
 }
 
-export default Admin
+export default AdminPanel
 
