@@ -8,7 +8,7 @@ function Text() {
     const[ numb, setNumb ] = useState(0)
     useEffect(() => {
         axios.get(`${url}/getAbout/5fa5acebd953234264241730`)
-            .then( res => {console.log(info)
+            .then( res => {
                 setDone(false)
                 setInfo(res.data)})
             .catch( err => console.log(err))

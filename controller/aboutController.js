@@ -1,14 +1,12 @@
 const About = require('../model/aboutSchema')
+const Pass = require('../model/passSchema')
 const key = process.env.SecretKey
-
 
 const getAbouts = (req, res) => {
     About.find()
     .then(response => {res.status(200).send(response)})
     .catch(err => console.log(err))
 }
-
-
 
 const getAbout = (req, res) => {
     About.findById(req.params.id)
@@ -24,7 +22,6 @@ const postAbout = (req, res) => {
 }
 
 const updateAbout = (req, res) => {
-    console.log(req)
     About.findByIdAndUpdate(req.params.id, req.body, {useFindAndModify:false}
         )
         .then(response => {res.status(200).send(response)})
@@ -37,10 +34,34 @@ const deleteAbout = (req, res) => {
         .catch(err => console.log(err))
 }
 
+//--------------------------------------------------------------------
+
+const getPass = (req, res) => {
+    Pass.findById(req.params.id)
+    .then(response => {res.status(200).send(response)})
+    .catch(err => console.log(err))
+}
+const postPass = (req, res) => {
+    const pass = new Pass(req.body)
+    pass.save()
+        .then(response => {res.status(200).send(response)})
+        .catch(err => console.log(err))
+}
+const updatePass = (req, res) => {
+    console.log(req.body)
+    Pass.findByIdAndUpdate(req.params.id, req.body, {useFindAndModify:false}
+        )
+        .then(response => {res.status(200).send(response)})
+        .catch(err => console.log(err))
+}
+
 module.exports = {
     getAbouts,
     getAbout,
     postAbout,
     updateAbout,
-    deleteAbout
+    deleteAbout,
+    getPass,
+    postPass,
+    updatePass
 }
