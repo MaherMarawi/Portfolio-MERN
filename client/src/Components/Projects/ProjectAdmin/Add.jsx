@@ -19,8 +19,7 @@ function Add({ numb, setNumb }) {
             formData.append(key, project[key])
         })
 		formData.append('projectImage', selectedImage);
-        console.log(formData)
-        axios.post(`${url}/postProject`,formData)
+        axios.post(`${url}/postProject`, formData)
             .then( res => {setNumb(numb +1)})
             .catch( err => console.log(err))
 	}
