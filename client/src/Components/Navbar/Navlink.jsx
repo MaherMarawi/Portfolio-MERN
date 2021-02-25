@@ -32,14 +32,13 @@ const Navlink = () => {
         window.addEventListener('scroll', listenScrollEvent)
     }, [])
     return (
-
         <div className='navlink' style={navStyle}>
             <Navbar color={navStyle.background} dark expand="lg" className="mb-5">
                 <Container>
                     <NavbarBrand href='#' id='name' style={{ color: navStyle.color }} >Maher Marawi</NavbarBrand>
                     <NavbarToggler onClick={toggle} />
                     <Collapse isOpen={isOpen} navbar>
-                        <Nav className="ml-auto" navbar>
+                        <Nav className="ml-auto" navbar style={{backgroundColor: navStyle.background }}>
                             <NavItem>
                                 <NavLink href='#About' className='link' style={{ color: navStyle.color }}>ABOUT</NavLink>
                             </NavItem>
