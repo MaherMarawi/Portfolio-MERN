@@ -87,9 +87,7 @@
 }
 
 /* About Section */
-#About{
-  /* margin-top: -150px; */
-}
+
 .section{
   padding: 70px 0;
   position: relative;
@@ -364,9 +362,6 @@ img {
 }
 .tab-content>.active {
   display: block;
-}
-.tab-content>.tab-pane {
-  /* display: none; */
 }
 .ml-auto {
   margin-left: auto !important;
