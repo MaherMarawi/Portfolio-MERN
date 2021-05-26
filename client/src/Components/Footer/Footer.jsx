@@ -1,7 +1,8 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import instaIcon from '../../Images/github.png'
 import linkIcon from '../../Images/linkedin.png'
-
+import axios from 'axios'
+import url from '../../url'
 const Footer = () => {
     const [info, setInfo] = useState(null)
     useEffect(() => {
