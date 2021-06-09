@@ -31,6 +31,7 @@ const Navlink = () => {
             setNavstyle({ background: 'transparent', paddingTop: '40px', color: 'rgb(211, 187, 155)' })
         }
     }
+    
     useEffect(() => {
         axios.get(`${url}/getUser/5fa5af509ad07f363cd869a2`)
             .then(res => {
