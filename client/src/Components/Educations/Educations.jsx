@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import url from '../../url'
-
+import Fade from 'react-reveal/Fade';
 function Educations() {
 
     const [educations, setEducations] = useState([])
@@ -20,18 +20,22 @@ function Educations() {
                 {educations && educations.map(edu =>
                     <div className='card'>
                         <div className='row'>
-                            <div className='col-md-3 jj aos-init aos-animate'>
-                                <div className='card-body cc-experience-header'>
-                                    <p>{edu.timeline}</p>
-                                    <div className='h5'>{edu.place}</div>
+                            <Fade left>
+                                <div className='col-md-3 jj aos-init aos-animate'>
+                                    <div className='card-body cc-experience-header'>
+                                        <p>{edu.timeline}</p>
+                                        <div className='h5'>{edu.place}</div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className='col-md-9 aos-init aos-animate'>
-                                <div className='card-body'>
-                                    <div className='h5'>{edu.name}</div>
-                                    <p>{edu.description}</p>
+                            </Fade>
+                            <Fade right>
+                                <div className='col-md-9 aos-init aos-animate'>
+                                    <div className='card-body'>
+                                        <div className='h5'>{edu.name}</div>
+                                        <p>{edu.description}</p>
+                                    </div>
                                 </div>
-                            </div>
+                            </Fade>
                         </div>
                     </div>
                 )}
