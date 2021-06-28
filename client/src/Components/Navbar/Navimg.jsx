@@ -1,7 +1,7 @@
 import React from 'react'
 import img from '../../Images/me.jpg'
 import { Link } from 'react-router-dom'
-import cv from '../../files/cv.pdf'
+import cv from '../../files/NL.NW.WD3_Maher Marawi.pdf'
 
 const Navimg = () => {
   return (
