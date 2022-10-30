@@ -4,6 +4,7 @@
   --main-title-color: #4F646F;
   --main-bg-color: #F4FAFF;
   --main-yellow-color: #d07d2f;
+  --main-back-color: #e9e9e9;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
@@ -246,11 +247,11 @@ body {
 }
 
 .card-body {
-  background-color: var(--main-bg-color);
+  background-color: var(--main-back-color);
 }
 
 .card {
-  background-color: var(--main-bg-color) !important;
+  background-color: var(--main-back-color) !important;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, .125);
   border-radius: .25rem;
@@ -348,6 +349,8 @@ body {
   position: relative;
   overflow: hidden;
   text-align: center;
+  
+  
 }
 
 /*==============================Education=======================================*/

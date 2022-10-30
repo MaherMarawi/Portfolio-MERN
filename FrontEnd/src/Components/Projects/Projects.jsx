@@ -16,14 +16,14 @@ const Projects = () => {
     return (
         <div>
             <div className='container' id='Projects'>
-            
-                
-                <div className='tab-content gallery mt-5'>
+                <div className='card tab-content gallery mt-5'>
                     <div className='tab-pane active'>
-                        <div className='ml-auto mr-auto'>
-                        <HeadShake>
-            <h4 className='title'>Projects</h4>
-        </HeadShake>
+                        <div className=' ml-auto mr-auto'>
+                        <div className='card-body'>
+                            <HeadShake>
+                                <h4 className='title'>Projects</h4>
+                            </HeadShake>
+                            </div>
                             <div className='row'>
                                 {projects?.map(project =>
                                     <div className='col-md-6' key={project.id}>

@@ -18,33 +18,35 @@ function Educations() {
     return (
         <div>
             <div className='container' id='Education'>
-            
-        <div className='card' >
-        <HeadShake>
-            <h4 className='title'>Education</h4>
-        </HeadShake>
-                {educations && educations.map(edu =>
-                    
+                <div className='card' >
+                <div className='card-body'>
+                    <HeadShake>
+                        <h4 className='title'>Education</h4>
+                    </HeadShake>
+                    </div>
+                    {educations && educations.map(edu =>
+
                         <div className='row' key={edu.id}>
-                        <Bounce left>
-                            <div className='col-md-3 aos-init aos-animate'>
-                                <div className='education-header'>
-                                    <p>{edu.timeline}</p>
-                                    <h4>{edu.place}</h4>
+                            <Bounce left>
+                                <div className='col-md-3 aos-init aos-animate'>
+                                    <div className='education-header'>
+                                        <p>{edu.timeline}</p>
+                                        <h4>{edu.place}</h4>
+                                    </div>
                                 </div>
-                            </div>
                             </Bounce>
                             <Bounce right>
-                            <div className='col-md-9 aos-init aos-animate'>
-                                <div className='card-body'>
-                                    <div className='h5'>{edu.name}</div>
-                                    <p>{edu.description}</p>
+                                <div className='col-md-9'>
+                                    <div className='card-body'>
+                                        <div className='h5'>{edu.name}</div>
+                                        <p>{edu.description}</p>
+                                    </div>
                                 </div>
-                            </div>
                             </Bounce>
                         </div>
+
+                    )}
                     
-                )}
                 </div>
             </div>
 
