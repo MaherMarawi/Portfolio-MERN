@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import url from '../../url'
-import Zoom from 'react-reveal/Zoom';
+
 import HeadShake from 'react-reveal/HeadShake';
+import ExpDetails from './ExpDetails';
+import ExpDetSkeleton from './ExpDetSkeleton';
 
 const Experience = () => {
     const [experiences, setExperiences] = useState([])
@@ -23,22 +25,12 @@ const Experience = () => {
                             <h4 className='title'>Experiences</h4>
                         </HeadShake>
                         <div className='row'>
-                            {experiences?.map(exp =>
+                            {experiences.length > 0 ?
+                                <ExpDetails experiences={experiences} />
+                                :
+                                <ExpDetSkeleton />
+                            }
 
-                                <div className='col-md-6' key={exp.id}>
-                                    <Zoom bottom>
-                                        <div className='progress-container progress-primary'>
-                                            <span className='progress-badge'>{exp.name}</span>
-                                            <div className='progress'>
-                                                <div className='progress-bar progress-bar-primary aos-init aos-animate' style={{ width: `${exp.grade}%` }}></div>
-
-
-                                                <span className='progress-value'>{exp.grade}</span>
-                                            </div>
-                                        </div>
-                                    </Zoom>
-                                </div>
-                            )}
                         </div>
                     </div>
                 </div>
