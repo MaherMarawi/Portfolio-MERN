@@ -3,22 +3,16 @@ import { Placeholder } from 'semantic-ui-react'
 
 function ExpDetSkeleton() {
   return (
-
-    
-    
       <Placeholder>
         <Placeholder.Header>
           <Placeholder.Line />
           <Placeholder.Line />
         </Placeholder.Header>
-
         <Placeholder.Header>
           <Placeholder.Line />
           <Placeholder.Line />
         </Placeholder.Header>
       </Placeholder>
-     
-
   )
 }
 

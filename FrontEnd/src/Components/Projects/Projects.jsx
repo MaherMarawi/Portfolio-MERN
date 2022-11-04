@@ -18,15 +18,15 @@ const Projects = () => {
                 <div className='card tab-content gallery mt-5'>
                     <div className='tab-pane active'>
                         <div className=' ml-auto mr-auto'>
-                        <div className='card-body'>
-                            <HeadShake>
-                                <h4 className='title'>Projects</h4>
-                            </HeadShake>
+                            <div className='card-body'>
+                                <HeadShake>
+                                    <h4 className='title'>Projects</h4>
+                                </HeadShake>
                             </div>
-                            {projects.length>0 ?
-                            <PorDetails projects={projects} />
-                            :
-                            <ProDetSkeleton />
+                            {projects.length > 0 ?
+                                <PorDetails projects={projects} />
+                                :
+                                <ProDetSkeleton />
                             }
                         </div>
                     </div>

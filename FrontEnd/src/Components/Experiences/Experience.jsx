@@ -12,9 +12,6 @@ const Experience = () => {
         axios.get(`${url}/getExperiences`)
             .then(res => { setExperiences(res.data) })
             .catch(err => console.log(err))
-        return () => {
-
-        }
     }, [])
     return (
         <div>
@@ -30,13 +27,11 @@ const Experience = () => {
                                 :
                                 <ExpDetSkeleton />
                             }
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     )
 }
 

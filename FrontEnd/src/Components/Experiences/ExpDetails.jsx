@@ -1,11 +1,10 @@
 import React from 'react'
 import Zoom from 'react-reveal/Zoom';
 
-function ExpDetails({experiences}) {
+function ExpDetails({ experiences }) {
     return (
         <React.Fragment>
             {experiences.map(exp =>
-
                 <div className='col-md-6' key={exp.id}>
                     <Zoom bottom>
                         <div className='progress-container progress-primary'>

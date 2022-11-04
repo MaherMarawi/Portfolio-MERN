@@ -23,7 +23,6 @@ function EduDetails({ educations }) {
                         </div>
                     </Bounce>
                 </div>
-
             )}
         </div>
     )

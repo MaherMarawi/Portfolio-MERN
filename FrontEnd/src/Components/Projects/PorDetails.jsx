@@ -3,7 +3,7 @@ import altImg from '../../imageProject/1.jpg'
 import RubberBand from 'react-reveal/RubberBand';
 import imageUrl from '../../imageUrl'
 
-function PorDetails({ projects} ) {
+function PorDetails({ projects }) {
     return (
         <div className='row'>
             {projects?.map(project =>

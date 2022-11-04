@@ -27,7 +27,6 @@ function ProDetSkeleton() {
                 </Card.Content>
             </Card>
         </Card.Group>
-
     )
 }
 

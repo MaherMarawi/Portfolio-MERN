@@ -1,23 +1,19 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import url from '../../url'
-
 import HeadShake from 'react-reveal/HeadShake';
-
 import EduDetails from './EduDetails'
 import EduDetSkeleton from './EduDetSkeleton';
 
 function Educations() {
 
     const [educations, setEducations] = useState([])
+    
     useEffect(() => {
         axios.get(`${url}/getEducations`)
             .then(res => { 
                 setEducations(res.data) })
             .catch(err => console.log(err))
-        return () => {
-
-        }
     }, [])
     return (
         <div>
