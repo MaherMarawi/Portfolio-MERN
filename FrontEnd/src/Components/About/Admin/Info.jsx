@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import url from '../../../url'
+import Skeleton from '../../Experiences/ExpDetSkeleton'
 
 function Info() {
     const[ info, setInfo ] = useState(null)
@@ -17,9 +18,13 @@ function Info() {
         }
     },[numb])
     const onClick = () => {
+        setDone(true)
         axios.put(`${url}/updateUser/5fa5af509ad07f363cd869a2`,info)
-            .then( res => {setNumb(numb +1)
-                setInfo(null)})
+            .then( res => {
+                setNumb(numb +1)
+                setInfo(null)
+                setDone(false)
+            })
             .catch( err => console.log(err))
     }
     const onChange = (e) => {
@@ -37,7 +42,13 @@ function Info() {
                 <input  name='address' onChange={onChange} value={info?.address}  />
                 <input  name='languages' onChange={onChange} value={info?.languages} /><br></br>
             </React.Fragment>
-             : <p>loading...</p>}
+             : 
+             <React.Fragment>
+                <Skeleton />
+                <Skeleton />
+             </React.Fragment>
+             
+             }
              <button disabled={done} onClick={() => onClick()} >{done ? 'loading...' : 'Edit'}</button>
              <hr></hr>
         </div>

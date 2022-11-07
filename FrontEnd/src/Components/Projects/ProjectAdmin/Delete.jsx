@@ -3,6 +3,8 @@ import axios from 'axios'
 import Add from './Add'
 import url from '../../../url'
 import imageUrl from '../../../imageUrl'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 function ProjectsAdmin() {
     const [ numb, setNumb ] = useState(0)
@@ -34,7 +36,7 @@ function ProjectsAdmin() {
                         <label>codeUrl</label><input type='text' name='codeUrl' value={project.codeUrl}  />
                         <label>Image :</label><label>{project.projectImage}</label><img style={{ margin: '1px', width: '100px'}} src={`${imageUrl}${project.projectImage}`}></img>
                         
-                        <button onClick={() => onClick(project._id)}>delete</button>
+                        <button onClick={() => onClick(project._id)} ><FontAwesomeIcon icon={faCoffee} /></button>
                         <br></br>
                     </React.Fragment>
                     

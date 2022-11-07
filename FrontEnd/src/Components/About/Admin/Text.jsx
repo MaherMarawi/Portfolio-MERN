@@ -18,7 +18,6 @@ function Text() {
         }
     },[numb])
     const onClick = () => {
-        console.log(info)
         axios.put(`${url}/updateAbout/5fa5acebd953234264241730`,info)
             .then( res => {setNumb(numb +1)
                 setInfo(null)})
