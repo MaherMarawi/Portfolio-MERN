@@ -17,10 +17,9 @@ const Contact = () => {
     return (
         <div>
             <div>
-            <HeadShake>
-            <h4 className='title' id='Contact'>Contact me</h4>
-        </HeadShake>
-                
+                <HeadShake>
+                    <h4 className='title' id='Contact'>Contact me</h4>
+                </HeadShake>
                 <div className='mapouter'>
                     <div>
                         <iframe width="100%" height="550px" id="gmap_canvas" title="map" src="https://maps.google.com/maps?q=Rotterdam%20The%20netherlands&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
@@ -29,8 +28,7 @@ const Contact = () => {
                 <div className='container'>
                     <div className='form'>
                         <div className='card form-div'>
-                                <ContactForm />
-                            
+                            <ContactForm />
                         </div>
                     </div>
                 </div>
