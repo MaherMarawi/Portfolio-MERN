@@ -12,6 +12,7 @@ const ContactForm = () => {
     const [ loading, setLoading ] = useState(false)
 
     const onChange = (e) => {
+        console.log("rendred")
         setError('')
         setMessage({...message,[e.target.name]: e.target.value})
     }

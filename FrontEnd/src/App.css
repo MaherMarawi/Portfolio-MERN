@@ -190,11 +190,12 @@ body {
   border-radius: 50%;
   animation: shadow-pulse 1.7s infinite;
   transition: all .3s ease-out;
+  border: 3px solid var(--main-bg-color);
 }
 
 @keyframes shadow-pulse {
   50% {
-    box-shadow: 0 0 0 0px var(--main-blue-color);
+    box-shadow: 0 0 0 0px var(--main-yellow-color);
   }
 
   100% {
@@ -207,6 +208,7 @@ body {
   width: 180px;
   animation: none;
   filter: brightness(105%);
+  border: 0px;
 }
 
 .btn-cv {
@@ -319,6 +321,7 @@ body {
 
 /*================================Projects========================================*/
 .overlay {
+  
   padding-top: 8%;
   position: absolute;
   top: 2.5%;
@@ -337,6 +340,7 @@ body {
 .overlay h4 {
   margin-top: 1%;
   color: var(--main-bg-color);
+  font-family: 'Roboto Mono', monospace !important;
 }
 
 .overlay p {
@@ -347,6 +351,7 @@ body {
   margin-top: 1%;
   color: var(--main-blue-color);
   font-style: italic;
+  font-family: 'Roboto Mono', monospace !important;
 }
 
 .cc-effect:hover .overlay {
