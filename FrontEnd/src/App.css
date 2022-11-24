@@ -7,7 +7,10 @@
   --main-back-color: #FFFFFF;
   --main-uu-color: #5c320b;
 }
-
+*{
+  margin: 0;
+  padding: 0;
+}
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap');
 
 body {
@@ -98,6 +101,12 @@ body {
   .humburgerm-icon {
     display: none;
   }
+  .col-lg-6{
+    width: 100% !important;
+  }
+  .col-md-12{
+    width: 100% !important;
+  }
 
 }
 
@@ -156,7 +165,7 @@ body {
 .navimg:after,
 .navimg:before {
   content: '';
-  background: var(--main-bg-color);
+  background: var(--main-back-color);
   position: fixed;
   top: 0px;
   left: 0;
