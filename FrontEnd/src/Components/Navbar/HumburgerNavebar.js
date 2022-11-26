@@ -1,6 +1,7 @@
 import { FcDatabase } from 'react-icons/fc'
 import HumburgerForm from './HumburgerForm';
 import { useState } from 'react'
+import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 
 const HumburgerNavbar = () => {
     const [humFormStyle, setHumFormStyle] = useState({
@@ -18,8 +19,8 @@ const HumburgerNavbar = () => {
     return (
         <div>
             <HumburgerForm humFormStyle={humFormStyle} setHumFormStyle={setHumFormStyle} />
-            <div className='humburgerm-icon' onClick={() => onclick()}>
-                <FcDatabase size={30} />
+            <div className='humburger-icon' onClick={() => onclick()}>
+                <MenuOutlinedIcon sx={{ color: "#d07d2f", fontSize: 30 }}/>
             </div>
         </div>
     )

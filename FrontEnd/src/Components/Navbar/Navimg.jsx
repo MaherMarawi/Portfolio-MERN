@@ -7,7 +7,9 @@ import url from '../../url'
 import Navlink from './Navlink'
 import { BsFileEarmarkPdfFill } from 'react-icons/bs'
 import PlaceholderLoading from 'react-placeholder-loading'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import PictureAsPdfOutlinedIcon from '@mui/icons-material/PictureAsPdfOutlined';
+
+
 
 const Navimg = () => {
   const [mainTitle, setMainTitle] = useState()
@@ -22,18 +24,19 @@ const Navimg = () => {
       </div>
       <div className="nav-titles">
         <img className='mijn-img' src={img}></img>
-        
+
         {mainTitle ?
-          <span className='nav-title'>{mainTitle && mainTitle.mainTitleText}</span>
+          <span className='nav-title'>
+            {mainTitle && mainTitle.mainTitleText}
+          </span>
           :
           <div className='nav-title-div'>
             <span className='nav-title'>LOADING</span>
-            <PlaceholderLoading colorStart="#5c320b" colorEnd="#d07d2f" shape="rect" width={200} height={25} />
-            
+            <PlaceholderLoading colorStart="#5c320b" colorEnd="#d07d2f" shape="rect" width={200} height={27} />
           </div>
         }
-        
-        <Link to={cv} target="_blank" download><BsFileEarmarkPdfFill className='btn-cv' contentScriptType={"cv"} color='#d07d2f' size={70} /></Link>
+        <Link to={cv} target="_blank" download><PictureAsPdfOutlinedIcon className='btn-cv' sx={{ fontSize: 80 }}/>
+        </Link>
       </div>
     </div>
   )

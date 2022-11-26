@@ -92,25 +92,17 @@ body {
     background-attachment: local;
   }
 
-
-
-
 }
 
 @media only screen and (min-width: 768px) {
-  .humburgerm-icon {
+  .humburger-icon {
     display: none;
   }
-  .col-lg-6{
-    width: 100% !important;
-  }
-  .col-md-12{
-    width: 100% !important;
-  }
+ 
 
 }
 
-/*================================HumburgerMenu============================== */
+/*================================-HumburgerMenu-============================== */
 .HumNavlink li {
   list-style-type: none;
   margin: auto auto;
@@ -137,15 +129,12 @@ body {
   color: var(--main-yellow-color);
 }
 
-.humburgerm-icon {
+.humburger-icon {
   position: fixed;
-  top: 1.5%;
+  top: 1.3%;
   width: 100%;
   text-align: center;
   z-index: 99;
-  /* left: 50%; */
-  /* width: 10%;
-  height: 10%; */
 }
 
 /*==========================================================================*/
@@ -199,7 +188,7 @@ body {
   border-radius: 50%;
   animation: shadow-pulse 1.7s infinite;
   transition: all .3s ease-out;
-  border: 3px solid var(--main-bg-color);
+  border: 3px solid var(--main-yellow-color);
 }
 
 @keyframes shadow-pulse {
@@ -221,14 +210,18 @@ body {
 }
 
 .btn-cv {
-  font-size: 1.4rem;
+  /* font-size: 1.4rem; */
   position: absolute;
   top: 65%;
   left: 50%;
   transform: translate(-50%, -65%);
   transition: 0.3s;
+  width: 100px;
+  height: 100px;
 }
-
+.btn-cv :hover{
+  content: cv;
+}
 .nav-title {
   font-size: 1.5rem;
   color: var(--main-yellow-color);
@@ -237,6 +230,7 @@ body {
   left: 50%;
   transform: translate(-50%, -55%);
   text-align: center;
+  font-weight: 900;
 }
 
 .nav-title-div {
@@ -277,8 +271,7 @@ body {
 }
 
 .card {
-  background-color: var(--main-back-color) !important;
-  background-clip: border-box;
+  background-color: var(--main-back-color);
   border: 1px solid rgba(0, 0, 0, .125);
   border-radius: .25rem;
   -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
