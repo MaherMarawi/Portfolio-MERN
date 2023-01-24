@@ -11,11 +11,11 @@
   margin: 0;
   padding: 0;
 }
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap'); */
 
 body {
   background-color: var(--main-back-color) !important;
-  font-family: 'Roboto Mono', monospace !important;
+  /* font-family: 'Roboto Mono', monospace !important; */
 }
 
 .navlink {
@@ -258,7 +258,7 @@ body {
 .card-body h4,
 #Contact {
   margin-bottom: 25px !important;
-  font-family: 'Roboto Mono', monospace !important;
+  /* font-family: 'Roboto Mono', monospace !important; */
 }
 
 .container {
@@ -342,7 +342,7 @@ body {
 .overlay h4 {
   margin-top: 1%;
   color: var(--main-bg-color);
-  font-family: 'Roboto Mono', monospace !important;
+  /* font-family: 'Roboto Mono', monospace !important; */
 }
 
 .overlay p {
@@ -353,7 +353,7 @@ body {
   margin-top: 1%;
   color: var(--main-blue-color);
   font-style: italic;
-  font-family: 'Roboto Mono', monospace !important;
+  /* font-family: 'Roboto Mono', monospace !important; */
 }
 
 .cc-effect:hover .overlay {
@@ -453,7 +453,7 @@ textarea {
 .footer h4 {
   color: var(--main-yellow-color);
   font-weight: 900;
-  font-family: 'Roboto Mono', monospace !important;
+  /* font-family: 'Roboto Mono', monospace !important; */
 }
 
 .footer:before {
