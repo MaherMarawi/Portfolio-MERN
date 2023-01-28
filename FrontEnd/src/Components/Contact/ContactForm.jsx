@@ -1,8 +1,8 @@
-import axios from 'axios'
+// import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 import { Button } from 'semantic-ui-react'
-import url from '../../url'
-import emailjs from '@emailjs/browser';
+// import url from '../../url'
+// import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
 
@@ -12,12 +12,12 @@ const ContactForm = () => {
     const [loading, setLoading] = useState(false)
 
 
-    const sendEmail = (e) => {
-        e.preventDefault();
-    }
+    // const sendEmail = (e) => {
+    //     e.preventDefault();
+    // }
 
 
-    const timer = setTimeout((value) => {
+    const timer = setTimeout(() => {
 
     }, 1000);
 
@@ -38,20 +38,20 @@ const ContactForm = () => {
         setError('')
         setCheck('')
         if (message?.name && message?.email && message?.message) {
-            emailjs.send('service_xw8s8dg', 'template_4c8yo5m', message, 'yv_FvhoXwy3tl2ezl')
-                .then((result) => {
-                    setCheck('your message has been sent')
-                    setLoading(false)
-                    setTimeout(() => {
-                        setCheck('')
-                    }, 3000);
-                }, (error) => {
-                    setError('somthing went wrong')
-                    setLoading(false)
-                    setTimeout(() => {
-                        setCheck('')
-                    }, 3000);
-                });
+            // emailjs.send('service_xw8s8dg', 'template_4c8yo5m', message, 'yv_FvhoXwy3tl2ezl')
+            //     .then((result) => {
+            //         setCheck('your message has been sent')
+            //         setLoading(false)
+            //         setTimeout(() => {
+            //             setCheck('')
+            //         }, 3000);
+            //     }, (error) => {
+            //         setError('somthing went wrong')
+            //         setLoading(false)
+            //         setTimeout(() => {
+            //             setCheck('')
+            //         }, 3000);
+            //     });
 
 
 

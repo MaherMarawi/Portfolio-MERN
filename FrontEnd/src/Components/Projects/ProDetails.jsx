@@ -3,11 +3,11 @@ import altImg from '../../imageProject/1.jpg'
 import RubberBand from 'react-reveal/RubberBand';
 import imageUrl from '../../imageUrl'
 
-function PorDetails({ projects }) {
+function ProDetails({ projects }) {
     return (
         <div className='row'>
             {projects?.map(project =>
-                <div className='col-md-6' key={project.id}>
+                <div className='col-md-6' key={project._id}>
                     <RubberBand>
                         <div className='cc-porfolio-image img-raised aos-init aos-animate'>
                             <a href={project.url} target='_Blank'>
@@ -32,4 +32,4 @@ function PorDetails({ projects }) {
     )
 }
 
-export default PorDetails
+export default ProDetails

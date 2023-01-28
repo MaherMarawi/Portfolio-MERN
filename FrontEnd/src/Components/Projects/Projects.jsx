@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import url from '../../url'
 import axios from 'axios'
 import HeadShake from 'react-reveal/HeadShake';
-import PorDetails from './PorDetails'
+import ProDetails from './ProDetails'
 import ProDetSkeleton from './ProDetSkeleton'
 
 const Projects = () => {
@@ -24,7 +24,7 @@ const Projects = () => {
                                 </HeadShake>
                             </div>
                             {projects.length > 0 ?
-                                <PorDetails projects={projects} />
+                                <ProDetails projects={projects} />
                                 :
                                 <ProDetSkeleton />
                             }

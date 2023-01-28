@@ -5,7 +5,7 @@ function EduDetails({ educations }) {
     return (
         <div>
             {educations.map(edu =>
-                <div className='row' key={edu.id}>
+                <div className='row' key={edu._id}>
                     <Bounce left>
                         <div className='col-md-3 aos-init aos-animate'>
                             <div className='education-header'>

@@ -22,7 +22,7 @@ const Contact = () => {
                 </HeadShake>
                 <div className='mapouter'>
                     <div>
-                        <iframe width="100%" height="550px" id="gmap_canvas" title="map" src="https://maps.google.com/maps?q=Rotterdam%20The%20netherlands&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                        <iframe width="100%" height="550px" id="gmap_canvas" title="map" src="https://maps.google.com/maps?q=Rotterdam%20The%20netherlands&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" marginHeight="0" marginWidth="0"></iframe>
                     </div>
                 </div>
                 <div className='container'>

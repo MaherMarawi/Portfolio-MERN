@@ -5,7 +5,7 @@ function ExpDetails({ experiences }) {
     return (
         <React.Fragment>
             {experiences.map(exp =>
-                <div className='col-md-6' key={exp.id}>
+                <div className='col-md-6' key={exp._id}>
                     <Zoom bottom>
                         <div className='progress-container progress-primary'>
                             <span className='progress-badge'>{exp.name}</span>
