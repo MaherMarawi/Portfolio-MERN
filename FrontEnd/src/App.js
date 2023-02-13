@@ -1,28 +1,39 @@
-import React from 'react'
+import Home from "./pages/home/Home"
+import Admin from "./pages/admin/Admin"
+import {
+  createBrowserRouter,
+  RouterProvider
+} from "react-router-dom";
+import { useContext } from "react";
+import { DarkModeContext } from "./context/darkModeContext";
+import {
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query'
 
-import { BrowserRouter, BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import './App.css';
-// import 'semantic-ui-css/semantic.min.css'
-import 'rebass'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Home from './Components/Home'
-import AdminPanel from './Components/AdminPanel'
+function App() {
 
-const App = () => {
+  const { darkMode } = useContext(DarkModeContext)
+  const queryClient = new QueryClient()
 
+  const router = createBrowserRouter([
 
+    {
+      path: "/",
+      element: <Home />,
+    },
+    {
+      path: "/adminPanel",
+      element: <Admin />,
+    },
+  ]);
   return (
-    <div className="App">
-      <Router>
-        <Switch>
-          <Route exact path='/adminPanel' component={AdminPanel} />
-          <Route exact path='/' component={Home} />
-        </Switch>
-      </Router>
-    </div>
-  )
+    <QueryClientProvider client={queryClient}>
+      <div className={`theme-${darkMode ? 'dark' : 'light'}`}>
+        <RouterProvider router={router} />
+      </div>
+    </QueryClientProvider>
+  );
 }
 
-
-
-export default App
+export default App;

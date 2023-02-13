@@ -1,0 +1,90 @@
+@import "../../style.scss";
+
+.about {
+    @include themify ($themes) {
+
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        color: themed("textColor");
+
+        .container {
+            padding: 20px;
+            width: 90%;
+            display: flex;
+            gap: 30px;
+            -webkit-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+            -moz-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+            box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+            border-radius: 5px;
+            background-color: themed("bg");
+            transition: .5s;
+            color: themed("textColor");
+
+            @include mobile {
+                flex-direction: column;
+            }
+
+            .left {
+                flex: 1;
+                font-size: 12px;
+
+                span {
+                    font-size: 20px;
+                    font-weight: bold;
+                    display: flex;
+                    justify-content: center;
+                    padding-bottom: 10px;
+                }
+
+            }
+
+            .right {
+                flex: 1;
+                font-size: 12px;
+
+                .items {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 40px;
+                    .labels {
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        gap: 5px;
+
+                        label {
+                            font-size: 12px;
+                            font-weight: 500;
+                            color: themed("textColorSoft");
+                        }
+                    }
+
+                    .info {
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        gap: 5px;
+                        label {
+                            font-size: 12px;
+                            font-weight: 500;
+                            // padding: 10px;
+                        }
+                    }
+                }
+
+                span {
+                    font-size: 20px;
+                    font-weight: bold;
+                    display: flex;
+                    justify-content: center;
+                    padding-bottom: 10px;
+                }
+
+
+
+            }
+        }
+    }
+}
