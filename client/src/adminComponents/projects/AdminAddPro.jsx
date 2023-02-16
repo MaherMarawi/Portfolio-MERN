@@ -22,6 +22,20 @@ const AdminAddPro = () => {
         addProjectMutation.mutate(project)
     }
 
+    // const handleSubmission = () => {
+    //     const formData = new FormData();
+    //     const arrayProject = Object.keys(project)
+    //     arrayProject.forEach(key => {
+    //         console.log(key, project[key])
+    //         formData.append(key, project[key])
+    //     })
+	// 	formData.append('projectImage', selectedImage);
+    //     axios.post(`${url}/postProject`, formData)
+    //         .then( res => {setNumb(numb +1)})
+    //         .catch( err => console.log(err))
+	// }
+
+
     return (
     <div>
         <input onChange={handleChange} name="name" placeholder="Name" />

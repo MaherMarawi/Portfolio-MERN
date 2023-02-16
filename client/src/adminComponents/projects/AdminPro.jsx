@@ -40,6 +40,7 @@ const queryCLient = useQueryClient()
             <div className="project" key={project._id}>
               <input onChange={handleChange} defaultValue={project.name} />
               {/* <img src={darkMode ? projectImageDark : projectImageLight} /> */}
+              {/* <img src={`${imageUrl}${project.projectImage}`} onError={(e) => { e.target.onerror = null; e.target.src = altImg }}></img> */}
               <div className="project-info" >
                 <input onChange={handleChange} defaultValue={project.description} />
                 <input onChange={handleChange} defaultValue={project.usedFramework} />
