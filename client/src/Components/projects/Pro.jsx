@@ -13,17 +13,18 @@ const Pro = () => {
     queryFn: () => getProjects()
   });
   const { darkMode } = useContext(DarkModeContext)
-  
-if(error) return <h1>{error.message}</h1>
+
+  if (error) return <h1>{error.message}</h1>
 
   return (
     <div className="pro" id="Projects">
       <div className="container">
         <span>Projects</span>
         <div className="projects">
-          {data && data.map( project => (
+          {data && data.map(project => (
             <div className="project" key={project._id}>
               <span>{project.name}</span>
+              {/* <img src={`${imageUrl}${project.projectImage}`} onError={(e) => { e.target.onerror = null; e.target.src = altImg }}></img> */}
               <img src={darkMode ? projectImageDark : projectImageLight} />
               <div className="project-info" >
                 <p>{project.description}</p>

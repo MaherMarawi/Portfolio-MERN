@@ -14,7 +14,7 @@ export const addExperience = async (experience) => {
 } 
 
 export const updateExperience = async (id, experience) => {
-    return await makeRequest.patch(`/updateExperience/${id}`, experience).then(res => res.data)
+    return await makeRequest.put(`/updateExperience/${id}`, experience).then(res => res.data)
 } 
 
 export const deleteExperience = async (id) => {

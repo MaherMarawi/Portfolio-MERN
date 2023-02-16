@@ -3,6 +3,7 @@ import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { postProject } from '../../api/projectsApi'
 import Loader from '../../loader/Loader'
 const AdminAddPro = () => {
+    
     const queryCLient = useQueryClient()
     const [ project, setProject ] = useState()
 
@@ -18,7 +19,6 @@ const AdminAddPro = () => {
         setProject({...project, [e.target.name]: e.target.value})
     }
     const handleSubmit = () => {
-        console.log(project)
         addProjectMutation.mutate(project)
     }
 
@@ -34,7 +34,6 @@ const AdminAddPro = () => {
     //         .then( res => {setNumb(numb +1)})
     //         .catch( err => console.log(err))
 	// }
-
 
     return (
     <div>

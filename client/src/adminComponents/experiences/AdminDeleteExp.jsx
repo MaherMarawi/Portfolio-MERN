@@ -1,3 +1,4 @@
+import "./adminExp.scss"
 
 import { deleteExperience } from "../../api/experiencesApi"
 import { useMutation, useQueryClient } from "@tanstack/react-query"

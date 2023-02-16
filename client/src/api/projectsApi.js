@@ -14,7 +14,7 @@ export const postProject = async (project) => {
 } 
 
 export const updateProject = async (id, project) => {
-    return await makeRequest.patch(`/updateProject/${id}`, project).then(res => res.data)
+    return await makeRequest.put(`/updateProject/${id}`, project).then(res => res.data)
 }
 
 export const deleteProject = async (id) => {

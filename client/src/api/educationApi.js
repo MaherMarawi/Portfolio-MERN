@@ -14,7 +14,7 @@ export const addEducation = async (education) => {
 } 
 
 export const updateEducation = async (id, education) => {
-    return await makeRequest.patch(`/updateEducation/${id}`, education).then(res => res.data)
+    return await makeRequest.put(`/updateEducation/${id}`, education).then(res => res.data)
 }
 
 export const deleteEducation = async (id) => {
