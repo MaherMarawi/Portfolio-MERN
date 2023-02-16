@@ -8,8 +8,8 @@
     "client-install": "npm install --prefix client",
     "start": "node server.js",
     "server": "nodemon server.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install",
-    "dev": "npm install & npm run start"
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "author": "Maher-Marawi",
   "license": "ISC",
