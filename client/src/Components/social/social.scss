@@ -1,0 +1,102 @@
+@import "../../style.scss";
+
+.social {
+    @include themify ($themes) {
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+        // justify-content: space-around;
+        color: themed("textColor");
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 20px 0px;
+            margin-top: 10px;
+            width: 100%;
+            // gap: 30px;
+            -webkit-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+            -moz-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+            box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+            border-radius: 5px;
+            background-color: themed("bg");
+            color: themed("textColor");
+            transition: .5s;
+
+            img {
+                // flex: 1;
+                // padding: 0px 10px;
+                width: 125px;
+                height: 125px;
+                border-radius: 50%;
+                border: 2px solid themed("border");
+                animation: shadow-pulse 1.7s infinite;
+                transition: all .3s ease-out;
+
+                @keyframes shadow-pulse {
+                    50% {
+                        box-shadow: 0 0 0 0px themed("border");
+                    }
+
+                    100% {
+                        box-shadow: 0 0 0 25px transparent;
+                    }
+                }
+
+                @include tablet {
+                    width: 90px;
+                    height: 90px;
+                }
+
+                @include mobile {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+
+            img:hover {
+                height: 250px;
+                width: 250px;
+                animation: none;
+            }
+
+            @include mobile {
+                img:hover {
+                    height: 150px;
+                    width: 150px;
+                    animation: none;
+                }
+            }
+
+            .left {
+                @include mobile {
+                    width: 50%;
+                }
+                
+
+                .icons {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 20px;
+
+                }
+
+                .main-title {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+
+                    span {
+                        color: themed('logo');
+                        font-weight: 500;
+                        line-height: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

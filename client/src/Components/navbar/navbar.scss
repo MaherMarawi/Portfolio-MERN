@@ -1,0 +1,109 @@
+@import "../../style.scss";
+
+
+.navbar {
+    @include themify($themes) {
+
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 15px;
+        border-bottom: 1px solid themed("border");
+        background-color: themed("bg");
+        color: themed("textColor");
+        position: sticky;
+        top: 0;
+        z-index: 9999;
+        box-sizing: border-box;
+        transition: .5s;
+        span {
+            font-size: 20px;
+            font-weight: 500;
+            color: themed("logo");
+            a{
+                text-decoration: none;
+            }
+        }
+
+        .navbar-all {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            .navbar-items {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 5px;
+                font-weight: 400;
+
+                @include mobile {
+                    display: none;
+                }
+                @include tablet {
+                    display: none;
+                }
+
+                a {
+                    color: themed("textColor");
+                    text-decoration: none;
+                    font-size: 12px;
+                    cursor: pointer;
+
+                }
+
+            }
+
+            .icons {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 15px;
+
+
+                .dark-mode {
+                    cursor: pointer;
+                }
+
+                .mobile-menu {
+                    display: none;
+
+                    @include mobile {
+                        display: block;
+                        // z-index: 100000;
+                    }
+                    @include tablet {
+                        display: block;
+                        // z-index: 100000;
+                    }
+
+                }
+                .navbar-items-mobile{
+                    display: none;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 20px;
+                    border-radius: 5px;
+                    gap: 20px;
+                    background-color: themed("logo");
+                    position: absolute;
+                    top: -220px;
+                    right: 0px;
+                    width: 150px;
+                    color: themed("border");
+                    font-weight: 600;
+                    transition: .3s;
+                    z-index: -1000; 
+
+                    a {
+                        text-decoration: none;
+                        font-size: 12px;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+        }
+
+
+
+    }
+}
