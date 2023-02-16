@@ -6,7 +6,7 @@ const makeRequest = axios.create({
 })
 
 export const getEducation = async () => {
-    return await makeRequest.get("/getEducations").then(res => res.data)
+    return await makeRequest.get("/getEducation").then(res => res.data)
 } 
 
 export const addEducation = async (education) => {
