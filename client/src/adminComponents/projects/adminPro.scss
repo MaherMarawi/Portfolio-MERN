@@ -30,12 +30,13 @@
             .projects {
                 display: flex;
                 gap: 30px;
-
+                // width: 500px;
                 @include mobile {
                     flex-direction: column;
                 }
-
+                
                 .project {
+                    // width: 100%;
                     flex: 1;
                     display: flex;
                     flex-direction: column;
@@ -54,21 +55,21 @@
 
                     .project-info {
                         // visibility: visible;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        gap: 10px;
+                        // display: flex;
+                        // flex-direction: column;
+                        // justify-content: center;
+                        // align-items: center;
+                        // gap: 10px;
                         color: themed("textColor");
-                        width: 90%;
-                        font-size: 12px;
-                        padding: 10px;
+                        // // width: 90%;
+                        font-size: 14px;
+                        // padding: 10px 0;
                         background-color: themed("bgSoft");
-                        // position: absolute;
-                        // top: 0.5;
-                        z-index: 99;
-                        transition: .2s;
-                        opacity: 100%;
+                        // // position: absolute;
+                        // // top: 0.5;
+                        // z-index: 99;
+                        // transition: .2s;
+                        // opacity: 100%;
                         
 
                         @include tablet {
@@ -126,11 +127,13 @@
                             
                         }
                         input {
-                            width: 100%;
+                            // width: 100%;
+                            padding: 5px;
                             border: none;
                             border-bottom: 1px solid themed("border");
                             background-color: themed("bg");
                             color: themed("textColor");
+                            overflow: scroll;
                         }
 
                         button {

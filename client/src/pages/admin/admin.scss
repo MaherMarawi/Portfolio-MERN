@@ -12,5 +12,10 @@
             background-color: themed("bg");
             color: themed("textColor");
         }
+        button {
+            padding: 5px 10px;
+            width: 80px;
+            height: 35px;
+        }
     }
 }

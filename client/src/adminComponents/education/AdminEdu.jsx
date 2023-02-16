@@ -1,8 +1,9 @@
-import "./edu.scss"
-import {
-  useQuery,
-} from '@tanstack/react-query'
+import "./adminEdu.scss"
+import { useQuery } from '@tanstack/react-query'
 import { getEducation } from "../../api/educationApi"
+import AdminAddEdu from "./AdminAddEdu";
+import AdminDeleteEdu from "./AdminDeleteEdu";
+import AdminEditEdu from "./AdminEditEdu";
 
 const Edu = () => {
 
@@ -11,25 +12,19 @@ const Edu = () => {
     queryFn: () => getEducation()
   });
 
-
   return (
-    <div className="edu" id="Education" >
+    <div className="admin-edu" id="Education" >
       <div className="container">
         <span>Education</span>
         <div className="education">
           {data && data.map(edu => (
             <div className="one-education" key={edu._id}>
-              <div className="one-education-info">
-                <div className="info">
-                  <label>{edu.timeline}</label>
-                  <label>{edu.place}</label>
-                </div>
-                <span>{edu.name}</span>
-              </div>
-              <p>{edu.description}</p>
+              <AdminEditEdu education={edu} />
+              <AdminDeleteEdu id={edu._id} />
             </div>
           ))}
         </div>
+        <AdminAddEdu />
       </div>
     </div>
   )

@@ -1,6 +1,6 @@
 @import "../../style.scss";
 
-.edu {
+.admin-edu {
     @include themify ($themes) {
 
         padding: 10px;
@@ -40,12 +40,12 @@
                     
                     padding: 10px;
                     .one-education-info {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        flex-direction: column;
+                        // display: flex;
+                        // align-items: center;
+                        // justify-content: center;
+                        // flex-direction: column;
                         gap: 10px;
-                        background-color: themed("bgTitle");
+                        // background-color: themed("bgTitle");
                         // background-color: red;
                         span {
                             font-size: 14px;
@@ -53,10 +53,10 @@
                         }
 
                         .info {
-                            display: flex;
-                            align-items: center;
-                            justify-content: space-between;
-                            gap: 10px;
+                            // display: flex;
+                            // align-items: center;
+                            // justify-content: space-between;
+                            padding: 5px 0;
                             color: themed("textColorSoft");
 
                             label {

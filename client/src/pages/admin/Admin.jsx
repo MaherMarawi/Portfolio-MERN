@@ -4,6 +4,7 @@ import AdminAbout from "../../adminComponents/about/AdminAbout"
 import AdminExp from "../../adminComponents/experiences/AdminExp"
 import Navbar from "../../Components/navbar/Navbar"
 import AdminPro from "../../adminComponents/projects/AdminPro"
+import AdminEdu from "../../adminComponents/education/AdminEdu"
 function Admin() {
   return (
     <div className="admin">
@@ -12,6 +13,7 @@ function Admin() {
       <AdminAbout />
       <AdminExp />
       <AdminPro />
+      <AdminEdu />
     </div>
   )
 }

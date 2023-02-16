@@ -20,7 +20,7 @@ const AdminEditExp = ({ experience }) => {
         setEditExp({ ...editExp, [e.target.name]: e.target.value })
     }
 
-    const handleSubmit = (id) => {
+    const handleSubmit = () => {
         const e = experience
         if (editExp.name) e.name = editExp.name
         if (editExp.grade) e.grade = editExp.grade
@@ -31,7 +31,7 @@ const AdminEditExp = ({ experience }) => {
         <div>
             <input defaultValue={experience.name} name="name" onChange={handleChange} />
             <input defaultValue={experience.grade} name="grade" onChange={handleChange} />
-            <button disabled={updateExperienceMutation.isLoading} onClick={() => handleSubmit(experience._id)}>{updateExperienceMutation.isLoading ? <Loader /> : "Edit"}</button>
+            <button disabled={updateExperienceMutation.isLoading} onClick={() => handleSubmit()}>{updateExperienceMutation.isLoading ? <Loader /> : "Edit"}</button>
         </div>
     )
 }

@@ -10,7 +10,7 @@ export const getEducation = async () => {
 } 
 
 export const addEducation = async (education) => {
-    return await makeRequest.post("/addEducation", education).then(res => res.data)
+    return await makeRequest.post("/postEducation", education).then(res => res.data)
 } 
 
 export const updateEducation = async (id, education) => {
